@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
 
+/* ///////////////////
+///// CONSTANTS /////////
+//////////////////////// */
+
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +12,9 @@
 
 body {
     background-color: #C5E4E7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 100vh;
 }
 
@@ -19,21 +26,14 @@ button {
     font-weight: 700;
 }
 
-img[alt=logo] {
-    margin: 50px auto 40px 144px;
+button {
+    cursor: pointer;
 }
 
-form {
-    background-color: #fff;
-    border-radius: 25px 25px 0 0;
-    padding: 32px 24px;
-}
-
-/* ////////////////////////
-///// INPUT ///////////////
-/////////////////////////// */
-.inputs div:nth-child(2) {
-    margin: 32px 0;
+input:focus {
+    outline: none;
+    border-color: #26C2AE;
+    caret-color: #26C2AE;
 }
 
 input,
@@ -48,29 +48,16 @@ input {
     border: 2px solid #F3F9FA;
     color: #00474B;
     text-align: right;
-    text-indent: -4px;
-}
-
-.text_input {
-    width: 311px;
-    height: 48px;
-    padding-right: 17px;
 }
 
 .text_input::placeholder {
     opacity: 0.35;
 }
 
-input:focus {
-    outline: none;
-    border-color: #26C2AE;
-    caret-color: #26C2AE;
-}
-
 .bill {
     background-image: url(./assets/icon-dollar.svg);
     background-repeat: no-repeat;
-    background-size: 10px 15px;
+    background-size: 10px 16px;
     background-position: 19px;
 }
 
@@ -88,15 +75,84 @@ input:focus {
     margin-bottom: 6px;
 }
 
-
-/* //// tip buttons ///// */
-
 .percent_button {
-    width: 146.63px;
-    height: 48px;
     background-color: #00474B;
     color: #fff;
     border: none;
+}
+
+
+/* -------- OUTPUT ----------*/
+h5 {
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+}
+
+.outputs p {
+    font-size: 13px;
+    line-height: 19px;
+    color: #7F9D9F;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.outputs button {
+    border: none;
+    padding: 9px 0;
+    font-size: 20px;
+    line-height: 30px;
+    color: #00474B;
+    background-color: #0D686D;
+    opacity: 0.35;
+}
+
+/* ////////////////////////////////
+---------------------------------
+----------------------------------
+///////// CHANGEBLE STYLES ///
+-----------------------------------
+-----------------------------------
+////////////////////////// */
+
+
+img[alt=logo] {
+    margin: 50px 0 40px 0;
+}
+
+form {
+    background-color: #fff;
+    border-radius: 25px 25px 0 0;
+    padding: 32px 24px;
+}
+
+/* ////////////////////////
+///// INPUT ///////////////
+/////////////////////////// */
+
+.inputs {
+    padding: 0 8px;
+}
+
+.text_input {
+    width: 311px;
+    height: 48px;
+    padding-right: 17px;
+}
+
+/* //// tip buttons ///// */
+
+.tip_input {
+    margin: 32px 0;
+}
+
+.percent_button {
+    width: 147px;
+    height: 50px;
 }
 
 .tip_percent {
@@ -104,7 +160,7 @@ input:focus {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    gap: 16px 16px;
+    gap: 18px 16.56px;
 }
 
 .custom_tip::placeholder {
@@ -113,8 +169,8 @@ input:focus {
 }
 
 .custom_tip {
-    width: 147px;
-    height: 48px;
+    width: 147.81px;
+    height: 50px;
     padding-right: 17px;
 }
 
@@ -130,12 +186,6 @@ input:focus {
     margin-top: 32px;
 }
 
-h5 {
-    font-size: 16px;
-    line-height: 24px;
-    color: #fff;
-}
-
 h2 {
     font-size: 32px;
     line-height: 47px;
@@ -144,30 +194,11 @@ h2 {
     color: #26C2AE;
 }
 
-.outputs p {
-    font-size: 13px;
-    line-height: 19px;
-    color: #7F9D9F;
-}
-
-.total {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .total:last-of-type {
     margin-top: 20px;
 }
 
 .outputs button {
     width: 281px;
-    background-color: #26C2AE;
-    border: none;
-    padding: 9px 0;
     margin-top: 32px;
-    font-size: 20px;
-    line-height: 30px;
-    text-align: center;
-    color: #00474B;
 }
