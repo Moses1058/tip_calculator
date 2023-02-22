@@ -26,7 +26,8 @@ button {
     font-weight: 700;
 }
 
-button {
+button,
+input {
     cursor: pointer;
 }
 
@@ -106,8 +107,11 @@ h5 {
     padding: 9px 0;
     font-size: 20px;
     line-height: 30px;
-    color: #00474B;
     background-color: #0D686D;
+    color: #00474B;
+}
+
+.outputs button::placeholder {
     opacity: 0.35;
 }
 
@@ -165,7 +169,6 @@ form {
 
 .custom_tip::placeholder {
     color: #547878;
-    margin-right: 17px;
 }
 
 .custom_tip {
@@ -201,4 +204,91 @@ h2 {
 .outputs button {
     width: 281px;
     margin-top: 32px;
+}
+
+
+@media (min-width: 1440px) {
+    form {
+        display: flex;
+    }
+
+    img[alt=logo] {
+        margin: 163px 0 87px 0;
+    }
+
+    form {
+        border-radius: 25px;
+        padding: 32px;
+    }
+
+    /* //////// INPUT ///////////////*/
+
+    .inputs {
+        padding: 13px 0 16px 16px;
+    }
+
+    .text_input {
+        width: 379px;
+    }
+
+    /* //// tip buttons ///// */
+
+    .tip_input {
+        margin: 40px 0;
+    }
+
+    .percent_button {
+        width: 117px;
+    }
+
+    .tip_percent {
+        width: 379px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 16px 14px;
+    }
+
+    .custom_tip {
+        width: 118px;
+        height: 50px;
+        padding-right: 15px;
+    }
+
+    /* --- OUTPUTS --- */
+    .outputs {
+        padding: 40px;
+        margin: 0 0 0 48px;
+    }
+
+    h2 {
+        font-size: 48px;
+        line-height: 71px;
+        letter-spacing: -1px;
+    }
+
+    .total:last-of-type {
+        margin-top: 25px;
+    }
+
+    .outputs button {
+        width: 333px;
+        margin-top: 122px;
+    }
+
+
+}
+
+
+
+/*  --------------------------------
+--------- HOVERS ------------------
+------------------------------------- */
+
+.percent_button:hover {
+    background-color: #9FE8DF;
+    color: #00474B;
+}
+
+.outputs button:hover {
+    background-color: #9FE8DF;
 }
