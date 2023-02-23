@@ -14,23 +14,26 @@
     <img src="./assets/logo.svg" alt="logo">
     <form>
         <div class="inputs">
-            <div>
+            <div id="bill">
                 <p class="input_p">Bill</p>
                 <input type="text" class="bill text_input" placeholder="0">
             </div>
             <div class="tip_input">
                 <p class="input_p">Select Tip %</p>
                 <div class="tip_percent">
-                    <button class="percent_button" type="button">5%</button>
-                    <button class="percent_button" type="button">10%</button>
-                    <button class="percent_button" type="button">15%</button>
-                    <button class="percent_button" type="button">25%</button>
-                    <button class="percent_button" type="button">50%</button>
+                    <button class="percent_button" type="button" onclick="buttonClick(0)">5%</button>
+                    <button class="percent_button" type="button" onclick="buttonClick(1)">10%</button>
+                    <button class="percent_button" type="button" onclick="buttonClick(2)">15%</button>
+                    <button class="percent_button" type="button" onclick="buttonClick(3)">25%</button>
+                    <button class="percent_button" type="button" onclick="buttonClick(4)">50%</button>
                     <input type="text" class="custom_tip" placeholder="Custom">
                 </div>
             </div>
-            <div>
-                <p class="input_p">Number of People</p>
+            <div id="people">
+                <div>
+                    <p class="input_p people_p">Number of People</p>
+                    <p class="alert">Can’t be zero</p>
+                </div>
                 <input type="text" class="people text_input" placeholder="0">
             </div>
         </div>
@@ -40,18 +43,19 @@
                     <h5>Tip Amount</h5>
                     <p>/ person</p>
                 </div>
-                <h2>$0.00</h2>
+                <h2 id="tip_per">$0.00</h2>
             </div>
             <div class="total_bill total">
                 <div>
                     <h5>Total</h5>
                     <p>/ person</p>
                 </div>
-                <h2>$0.00</h2>
+                <h2 id="bill_per">$0.00</h2>
             </div>
-            <button type="reset">RESET</button>
+            <button id="reset_button" type="reset" onclick="resetButtonClick()">RESET</button>
         </div>
     </form>
+    <script src="./js.js"></script>
 </body>
 
 </html>

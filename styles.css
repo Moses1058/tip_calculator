@@ -109,11 +109,9 @@ h5 {
     line-height: 30px;
     background-color: #0D686D;
     color: #00474B;
+    color: rgba(0, 71, 75, 0.35)
 }
 
-.outputs button::placeholder {
-    opacity: 0.35;
-}
 
 /* ////////////////////////////////
 ---------------------------------
@@ -146,6 +144,21 @@ form {
     width: 311px;
     height: 48px;
     padding-right: 17px;
+}
+
+#people div:first-child {
+    display: flex;
+    align-items: center;
+}
+
+.alert {
+    color: #E17457;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: right;
+    margin-bottom: 6px;
+    margin-left: 20px;
+    display: none;
 }
 
 /* //// tip buttons ///// */
@@ -231,6 +244,10 @@ h2 {
         width: 379px;
     }
 
+    .alert {
+        margin-left: 94px;
+    }
+
     /* //// tip buttons ///// */
 
     .tip_input {
@@ -291,4 +308,7 @@ h2 {
 
 .outputs button:hover {
     background-color: #9FE8DF;
+    color: rgba(0, 71, 75, 1);
 }
+
+/* ----------------------------- */
